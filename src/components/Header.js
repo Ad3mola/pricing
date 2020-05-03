@@ -87,23 +87,6 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        {/* <div className="row mx-auto text-center mt-4">
-          <div className="col-md-4 w-75 mx-auto">
-            <NavLink exact to="/bronze" className="card py-2">
-              Bronze
-            </NavLink>{" "}
-          </div>
-          <div className="col-md-4  w-75 mx-auto">
-            <NavLink to="/silver" className="card py-2">
-              Silver
-            </NavLink>
-          </div>
-          <div className="col-md-4  w-75 mx-auto">
-            <NavLink to="/gold" className="card py-2">
-              Gold
-            </NavLink>
-          </div>
-        </div> */}
       </Head>
   );
 };
