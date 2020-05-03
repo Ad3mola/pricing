@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ToastContainer, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import Header from "./components/Header";
+import PricingPage from "./components/PricingPage";
+import NotFound from "./components/NotFound";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={PricingPage} />
+        <Route component={NotFound} />
+      </Switch>
+      <ToastContainer
+            autoClose={4000}
+            transition={Slide}
+            draggablePercent={40}
+            hideProgressBar={true}
+          />
+    </Router>
   );
 }
 
